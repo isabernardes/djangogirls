@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Isabel's Blog</title>
+</head>
+
+<body>
+
+	<h1>Welcome to Isabel's Blog</h1>
+
+	<form method ="POST" action = "/create"> {% csrf_token %}
+		<input type ="text" name ="title" placeholder = "write title here">
+		<textarea name = "content" placeholder = "What's on your mind"></textarea>
+		<button type = "Submit">Submit</button>
+
+
+	</form>
+	<ol>
+		<li>
+			<h2>Djangogirls in Berlin</h2>
+			<h3>27 September 2015</h3>
+			<p>Djangogirls in Berlin happened this Saturday> we had lots of fun</p>
+		</li>	
+		
+		<li>
+			<h2>Djangogirls in Berlin</h2>
+			<h3>23 September 2015</h3>
+			<p>blablablabla</p>
+		</li>
+		
+		<li>
+			<h2>Djangogirls in Berlin</h2>
+			<h3>27 September 2015</h3>
+			<p>Djangogirls in Berlin happened this Saturday> we had lots of fun</p>
+		</li>
+		
+		<li>
+			<h2>Djangogirls in Berlin</h2>
+			<h3>27 September 2015</h3>
+			<p>Djangogirls in Berlin happened this Saturday> we had lots of fun</p>
+		</li>
+	</ol>
+
+
+</body>
