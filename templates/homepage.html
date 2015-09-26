@@ -19,29 +19,14 @@
 
 	</form>
 	<ol>
+		{% for post in posts %}
 		<li>
-			<h2>Djangogirls in Berlin</h2>
-			<h3>27 September 2015</h3>
-			<p>Djangogirls in Berlin happened this Saturday> we had lots of fun</p>
+			<h2>{{post.title}}</h2>
+			<h3>{{post.created}}</h3>
+			<p>{{post.content | linebreaks }}</p>
 		</li>	
-		
-		<li>
-			<h2>Djangogirls in Berlin</h2>
-			<h3>23 September 2015</h3>
-			<p>blablablabla</p>
-		</li>
-		
-		<li>
-			<h2>Djangogirls in Berlin</h2>
-			<h3>27 September 2015</h3>
-			<p>Djangogirls in Berlin happened this Saturday> we had lots of fun</p>
-		</li>
-		
-		<li>
-			<h2>Djangogirls in Berlin</h2>
-			<h3>27 September 2015</h3>
-			<p>Djangogirls in Berlin happened this Saturday> we had lots of fun</p>
-		</li>
+
+		{% endfor %}
 	</ol>
 
 

@@ -5,8 +5,8 @@ from .models import Post
 def homepage(request):
 	# import pdb
 	# pdb.set_trace()
-
-	return render(request, "homepage.html")
+	all_posts = Post.objects.all()
+	return render(request, "homepage.html", {"posts": all_posts})
 	# return HttpResponse("Hello, this is my first django thing")
 
 def latest_post(request):
@@ -18,5 +18,10 @@ def create(request):
 	post_title = request.POST["title"]
 	post_content = request.POST["content"]
 	new_post = Post.objects.create(title = post_title, content = post_content)
+	
+	return redirect('/')
+
+def delete(request):
+	Post.objects.all().delete()
 	
 	return redirect('/')
